@@ -1,18 +1,80 @@
 import React from 'react';
 
+const BoschLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">BOSCH</text>
+  </svg>
+);
+const SiemensLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">SIEMENS</text>
+  </svg>
+);
+const BalayLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">BALAY</text>
+  </svg>
+);
+const LgLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">LG</text>
+  </svg>
+);
+const SamsungLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">SAMSUNG</text>
+  </svg>
+);
+const AegLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">AEG</text>
+  </svg>
+);
+const ElectroluxLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">Electrolux</text>
+  </svg>
+);
+const WhirlpoolLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">Whirlpool</text>
+  </svg>
+);
+const TekaLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">Teka</text>
+  </svg>
+);
+const FagorLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">Fagor</text>
+  </svg>
+);
+const MieleLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">Miele</text>
+  </svg>
+);
+const ZanussiLogo: React.FC<{className: string}> = ({className}) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#36454F">Zanussi</text>
+  </svg>
+);
+
+
 const brands = [
-  { name: 'Bosch', logo: '/assets/images/brands/bosch.svg' },
-  { name: 'Siemens', logo: '/assets/images/brands/siemens.svg' },
-  { name: 'Balay', logo: '/assets/images/brands/balay.svg' },
-  { name: 'LG', logo: '/assets/images/brands/lg.svg' },
-  { name: 'Samsung', logo: '/assets/images/brands/samsung.svg' },
-  { name: 'AEG', logo: '/assets/images/brands/aeg.svg' },
-  { name: 'Electrolux', logo: '/assets/images/brands/electrolux.svg' },
-  { name: 'Whirlpool', logo: '/assets/images/brands/whirlpool.svg' },
-  { name: 'Teka', logo: '/assets/images/brands/teka.svg' },
-  { name: 'Fagor', logo: '/assets/images/brands/fagor.svg' },
-  { name: 'Miele', logo: '/assets/images/brands/miele.svg' },
-  { name: 'Zanussi', logo: '/assets/images/brands/zanussi.svg' }
+  { name: 'Bosch', LogoComponent: BoschLogo },
+  { name: 'Siemens', LogoComponent: SiemensLogo },
+  { name: 'Balay', LogoComponent: BalayLogo },
+  { name: 'LG', LogoComponent: LgLogo },
+  { name: 'Samsung', LogoComponent: SamsungLogo },
+  { name: 'AEG', LogoComponent: AegLogo },
+  { name: 'Electrolux', LogoComponent: ElectroluxLogo },
+  { name: 'Whirlpool', LogoComponent: WhirlpoolLogo },
+  { name: 'Teka', LogoComponent: TekaLogo },
+  { name: 'Fagor', LogoComponent: FagorLogo },
+  { name: 'Miele', LogoComponent: MieleLogo },
+  { name: 'Zanussi', LogoComponent: ZanussiLogo }
 ];
 
 const Brands: React.FC = () => {
@@ -27,10 +89,8 @@ const Brands: React.FC = () => {
           <div className="flex animate-marquee-infinite">
             {[...brands, ...brands].map((brand, index) => (
               <div key={index} className="flex-shrink-0 mx-8 flex items-center justify-center h-24">
-                <img 
-                  src={brand.logo} 
-                  alt={brand.name} 
-                  className="max-h-10 md:max-h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                <brand.LogoComponent 
+                  className="max-h-10 md:max-h-12 w-auto object-contain text-neutral-500 hover:text-neutral-800 transition-colors duration-300"
                   title={brand.name}
                 />
               </div>
